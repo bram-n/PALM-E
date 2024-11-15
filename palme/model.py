@@ -1,7 +1,7 @@
 import torch
 from torch import nn
 from zeta.structs import (
-    AutoregressiveWrapper,
+    AutoRegressiveWrapper,
     Decoder,
     Encoder,
     Transformer,
@@ -32,7 +32,7 @@ class PalmE(nn.Module):
 
     Attributes:
         encoder (ViTransformerWrapper): Encoder module.
-        decoder (AutoregressiveWrapper): Decoder module.
+        decoder (AutoRegressiveWrapper): Decoder module.
 
     """
 
@@ -81,7 +81,7 @@ class PalmE(nn.Module):
             ),
         )
 
-        self.decoder = AutoregressiveWrapper(self.decoder)
+        self.decoder = AutoRegressiveWrapper(self.decoder)
 
     def forward(
         self, img: torch.Tensor, text: torch.Tensor
